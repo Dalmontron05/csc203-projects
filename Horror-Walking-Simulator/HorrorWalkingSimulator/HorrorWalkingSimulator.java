@@ -3,6 +3,9 @@
 // Imports
 // import java.util.Scanner;
 
+package HorrorWalkingSimulator;
+
+import ANSI.ConsoleColors;
 
 public class HorrorWalkingSimulator
 {
@@ -11,9 +14,9 @@ public class HorrorWalkingSimulator
         // Scanner in = new Scanner(System.in);
 
         // Print colored text to the console
-        // System.out.println(GREEN + "This text is green." + RESET);
-        // System.out.println(YELLOW + "This text is yellow." + RESET);
-        // System.out.println(RED + "This text is red." + RESET);
+        System.out.println(ConsoleColors.GREEN + "This text is green." + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.YELLOW + "This text is yellow." + ConsoleColors.RESET);
+        System.out.println(ConsoleColors.RED + "This text is red." + ConsoleColors.RESET);
         
         System.out.println("Hello, this is an interactive choose your own adventure story inspired by various horror cryptids.");
 
