@@ -1,7 +1,5 @@
 //* Main Java File
 // Imports
-// import java.util.Scanner;
-
 import java.util.Scanner;
 
 public class CourseChooser
@@ -35,7 +33,7 @@ public class CourseChooser
         // Formula to calculate whether someone should take the class
         float x = 0.07f;
         float A = (F + (C / (float) N) + (H * (P / R * S))) * x;
-        
+
         System.out.println(A >= 1 ? "You should take the class" : "You shouldn't take the class.");
         
         in.close();
