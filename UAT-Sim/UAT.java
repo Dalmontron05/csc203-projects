@@ -1,7 +1,7 @@
 //* Main Java File
 // Program is a simulation of a university called UAT
 // Imports
-import java.util.Scanner;
+// import java.util.Scanner;
 
 
 public class UAT
@@ -14,18 +14,31 @@ public class UAT
         objSimManager.DisplayTitle();
         
         // Create objects
-        Student objStudent01 = new Student("Ramon", "Lopez", "12345");
-        Student objStudent02 = new Student("Andrew", "Lucier", "54321");
-        Student objStudent03 = new Student("Kyle", "Lemons", "67890");
+        //  People
+        // Person JakeMarrison = new Person("Jake", "Marrison");
+        //  Students
+        Student RamonLopez = new Student("Ramon", "Lopez", "12345");
+        Student AndrewLucier = new Student("Andrew", "Lucier", "54321");
+        Student KyleLemons = new Student("Kyle", "Lemons", "67890");
+        //  Professors
+        Professor LuciferMorningstar = new Professor("Lucifer", "Morningstar");
 
-        // Calling move method for each student
-        objStudent01.Move("Room 252");
-        objStudent02.Move("Room 252");
-        objStudent03.Move("Room 252");
+        // Terminal Output
+        AndrewLucier.Talk("I woke up bright and early in my UAT dorm room. After my usual morning routine, I walked to class. On my way to the campus, I see someone.");
+        RamonLopez.Talk("Hello! I'm " + RamonLopez.getFirstName() + ". By chance, are you enrolled here?");
+        AndrewLucier.Talk("Yes, Why?");
+        RamonLopez.Talk("I'm trying to find room 252 for my Java Programming class. Do you know where it is?");
+        AndrewLucier.Talk("Yeah I'm just about to go there, come on I'll show you.");
+        System.out.println("We made our way to the class.");
+        LuciferMorningstar.Teach(KyleLemons, 2);
+        LuciferMorningstar.Talk("Welcome, the next class is about to begin!");
+        LuciferMorningstar.Teach(RamonLopez, 1, 15);
+        LuciferMorningstar.Teach(AndrewLucier, 1, 15);
+        KyleLemons.Studying();
 
-        objStudent01.Studying();
-        objStudent02.Studying();
-        objStudent03.Studying();
+
+        
+
 
         // Call exit method
         objSimManager.DisplayExitMessage();

@@ -14,7 +14,18 @@ public class Student extends Person
 
     public void Studying()
     {
-        System.out.println("\n\nThe student " + getFirstName() + " is studying");
+        System.out.println("The student " + getFirstName() + " is studying");
+    }
+
+    // getters and setters
+    public String getStudentID()
+    {
+        return studentID;
+    }
+
+    public void setStudentID(String studentID)
+    {
+        this.studentID = studentID;
     }
 }
 
