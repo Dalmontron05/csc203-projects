@@ -2,7 +2,6 @@
 // these will be for our gui
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 // create our main class which has same name as file name
 // here is twist, we are extending our class with jframe because of gui
@@ -19,7 +18,7 @@ public class VP extends JFrame{
     private JLabel petLabel;
 
     // create constructor for class
-    public VirtualPet(){
+    public VP(){
         // set title of window
         super("Virtual Pet - Rodney");
 
@@ -68,7 +67,7 @@ public class VP extends JFrame{
         //add action listener when button is clicked
         playButton.addActionListener(e -> {
             // when button is clicked, increase happiness
-            hunger = Math.max(0, happiness + 20);
+            happiness = Math.max(0, happiness + 20);
             // decrease energy
             energy = Math.min(100, energy - 20);
             // increase hunger by 10
@@ -110,7 +109,7 @@ public class VP extends JFrame{
         // add components
         mainPanel.add(petLabel, BorderLayout.CENTER);
         mainPanel.add(statusLabel, BorderLayout.NORTH);
-        mainPanel.add(buttonLabel, BorderLayout.SOUTH);
+        mainPanel.add(buttonPanel, BorderLayout.SOUTH);
 
         // add main panel
         add(mainPanel);
@@ -127,8 +126,9 @@ public class VP extends JFrame{
     public static void main(String[] args){
         // create and show gui
         SwingUtilities.invokeLater(() ->{
-            VirtualPet pet = new VirtualPet();
+            VP pet = new VP();
             pet.setVisible(true);
         });
     }
 }
+
